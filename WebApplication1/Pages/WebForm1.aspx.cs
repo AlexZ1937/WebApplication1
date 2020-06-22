@@ -13,7 +13,7 @@ namespace WebApplication1
                 Anketa rsvp = new Anketa();
                 if (TryUpdateModel(rsvp, new FormValueProvider(ModelBindingExecutionContext)))
                 {
-                    ResponseRepository.GetRepository().AddResponse(rsvp);
+                    AnketaRepository.GetRepository().AddResponse(rsvp);
                     if (rsvp.Info==null || rsvp.Teleph == null || rsvp.Mark == null || rsvp.Model == null || rsvp.Numbrg == null || rsvp.Name == null)
                     {
                         Response.Redirect("NoPage1.html");

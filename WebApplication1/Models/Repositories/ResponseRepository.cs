@@ -5,12 +5,12 @@ using System.Web;
 
 namespace WebApplication1
 {
-    public class ResponseRepository
+    public class AnketaRepository
     {
-        private static ResponseRepository repository = new ResponseRepository();
+        private static AnketaRepository repository = new AnketaRepository();
         private List<Anketa> responses = new List<Anketa>();
 
-        public static ResponseRepository GetRepository()
+        public static AnketaRepository GetRepository()
         {
             return repository;
         }

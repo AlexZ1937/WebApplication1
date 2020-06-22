@@ -67,22 +67,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LenPage1.html" />
-    <Content Include="NoPage1.html" />
-    <Content Include="NotNumPage1.html" />
-    <Content Include="OkPage1.html" />
+    <Content Include="Content\LenPage1.html" />
+    <Content Include="Content\NoPage1.html" />
+    <Content Include="Content\NotNumPage1.html" />
+    <Content Include="Content\OkPage1.html" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Pages\WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anketa.cs" />
+    <Compile Include="Models\Anketa.cs" />
+    <Compile Include="Presenters\AnketaPresenter.cs" />
+    <Compile Include="Presenters\IPresenter.cs" />
+    <Compile Include="Presenters\Results\DataResult.cs" />
+    <Compile Include="Presenters\Results\IResult.cs" />
+    <Compile Include="Presenters\Results\RedirectResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResponseRepository.cs" />
-    <Compile Include="WebForm1.aspx.cs">
+    <Compile Include="Models\Repositories\ResponseRepository.cs" />
+    <Compile Include="Pages\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
+    <Compile Include="Pages\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -95,6 +100,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
